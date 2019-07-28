@@ -1,0 +1,5 @@
+steps:
+
+  - id: "test-go"
+    name: "gcr.io/cloud-builders/go:alpine"
+    args: ['go', 'test', './...']
