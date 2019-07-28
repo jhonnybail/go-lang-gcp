@@ -1,6 +1,10 @@
 steps:
 
+  - id: "install go"
+    name: 'gcr.io/cloud-builders/go'
+    args: ['install', 'sum']
+    env: ['GOPATH=.']
   - id: "test go"
     name: 'gcr.io/cloud-builders/go'
-    args: ['test', 'src/sum']
-    env: ['PROJECT_ROOT=sum']
+    args: ['test', 'sum']
+    env: ['GOPATH=.']
