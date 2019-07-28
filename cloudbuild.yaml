@@ -1,5 +1,6 @@
 steps:
 
-  - id: "test-go"
-    name: "gcr.io/cloud-builders/go:alpine"
-    args: ['go', 'test', './...']
+  - id: "test go"
+    name: 'gcr.io/cloud-builders/go'
+    args: ['test', '/go/bin/sum']
+    env: ['PROJECT_ROOT=sum']
